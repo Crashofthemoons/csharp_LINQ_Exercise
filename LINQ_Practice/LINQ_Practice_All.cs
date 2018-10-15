@@ -30,12 +30,13 @@ namespace LINQ_Practice
         [TestMethod]
         public void DoAllCohortsHaveTwoOrMoreJuniorInstructors()
         {
-            var doAll = PracticeData/*FILL IN LINQ EXPRESSION*/;
-            Assert.IsTrue(false); //<-- change false to doAll
+            var doAll = from Cohort in PracticeData where Cohort.JuniorInstructors.Count > 1 select Cohort;
+           
+            Assert.IsTrue(doAll); //<-- change false to doAll
         }
 
         [TestMethod]
-        public void DoAllCohortsFiveStudents()
+        public void DoAllCohortsFiveStudents() 
         {
             var doAll = PracticeData/*FILL IN LINQ EXPRESSION*/;
             Assert.IsTrue(false); //<-- change false to doAll
